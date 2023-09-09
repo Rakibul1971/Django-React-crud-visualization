@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style></style>
+  </head>
+  <body>
+    {% if fDa %}
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Trade-Code</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Open</th>
+        <th>Close</th>
+        <th>Volume</th>
+      </tr>
+      {% for f in fDa %}
+      <tr>
+        <td>{{f.id}}</td>
+        <td>{{f.date}}</td>
+        <td>{{f.trade_code}}</td>
+        <td>{{f.high}}</td>
+        <td>{{f.low}}</td>
+        <td>{{f.open}}</td>
+        <td>{{f.close}}</td>
+        <td>{{f.volume}}</td>
+      </tr>
+    </table>
+    {% endfor %} {% else %}
+    <h1>Empty DB</h1>
+    {% endif %}
+  </body>
+</html>
